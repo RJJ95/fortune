@@ -1,22 +1,23 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// Pages
-import Home from "./pages/home";
-import PageNotFound from "./pages/page-not-found";
-
 // Components
 import Layout from "./components/functionals/layout";
 
 // Config
-import { paths } from "./config/paths";
+import { routes } from "./config/routes";
 
 function App() {
   return (
     <Layout>
       <Router>
         <Switch>
-          <Route exact path={paths.home} component={Home} />
-          <Route component={PageNotFound} />
+          {Object.values(routes).map((route) => (
+            <Route
+              exact={route.exact}
+              path={route.path}
+              component={route.component}
+            />
+          ))}
         </Switch>
       </Router>
     </Layout>
