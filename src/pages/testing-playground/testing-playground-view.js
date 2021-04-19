@@ -1,9 +1,16 @@
-import { Wrapper } from "./testing-playground-style"
+import { Wrapper } from "./testing-playground-style";
+
+// Components
+import Button from "../../components/primitives/button";
 
 const TestingPlayground = () => {
-    return <Wrapper><h1>TestingTestingTestingTesting TestingTestingTesting</h1></Wrapper>
+  return (
+    <Wrapper>
+      <Button type="secondary">
+        Test button
+      </Button>
+    </Wrapper>
+  );
 };
 
 export default TestingPlayground;
-    
-    

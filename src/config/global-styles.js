@@ -39,6 +39,14 @@ p {
   font-size: 1em;
   line-height: 1.8;
 }
+
+button {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
+  box-shadow: ${({ theme }) => theme.shadows.medium};
+  cursor: pointer;
+}
 `;
 
 export default GlobalStyles;
