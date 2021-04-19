@@ -6,9 +6,7 @@ import Button from "../../components/primitives/button";
 const TestingPlayground = () => {
   return (
     <Wrapper>
-      <Button type="secondary">
-        Test button
-      </Button>
+      <input type="text" />
     </Wrapper>
   );
 };

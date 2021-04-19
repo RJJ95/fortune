@@ -47,6 +47,14 @@ button {
   box-shadow: ${({ theme }) => theme.shadows.medium};
   cursor: pointer;
 }
+
+input[type=text] {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
+  box-shadow: ${({ theme }) => theme.shadows.medium};
+  outline: none;
+}
 `;
 
 export default GlobalStyles;
