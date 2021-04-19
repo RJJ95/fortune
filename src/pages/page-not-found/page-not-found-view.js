@@ -1,9 +1,5 @@
-import { Wrapper } from "./page-not-found"
+import { Wrapper } from "./page-not-found-style";
 
-const PageNotFound = () => {
-    return <Wrapper></Wrapper>
-};
+const PageNotFound = () => <Wrapper>We've got a 404 over here!</Wrapper>;
 
 export default PageNotFound;
-    
-    
