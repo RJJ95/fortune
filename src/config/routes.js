@@ -7,11 +7,13 @@ export const routes = {
     path: "/",
     exact: true,
     component: Home,
+    name: "Home",
   },
   testingPlayground: {
     path: "/testing-playground",
     exact: true,
     component: TestingPlayground,
+    name: "Testing playground",
   },
   pageNotFound: {
     component: PageNotFound,

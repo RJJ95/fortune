@@ -8,8 +8,8 @@ import { routes } from "./config/routes";
 
 function App() {
   return (
-    <Layout>
-      <Router>
+    <Router>
+      <Layout>
         <Switch>
           {Object.values(routes).map((route) => (
             <Route
@@ -19,8 +19,8 @@ function App() {
             />
           ))}
         </Switch>
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   );
 }
 
