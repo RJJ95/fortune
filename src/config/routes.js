@@ -1,4 +1,3 @@
-// Pages
 import Home from "../pages/home";
 import PageNotFound from "../pages/page-not-found";
 import TestingPlayground from "../pages/testing-playground";
