@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Column from "../../primitives/column";
 
 export const Wrapper = styled.nav`
@@ -14,11 +14,18 @@ export const Wrapper = styled.nav`
 export const Items = styled(Column)`
   justify-content: center;
   align-items: center;
-  padding: 35px;
 `;
 
-export const Item = styled(Link)`
+export const Item = styled(NavLink)`
   text-decoration: none;
+  width: 30px;
+  fill: ${({ theme }) => theme.colors.mediumGrey};
+  margin-bottom: 35px;
+  transition: all 200ms linear;
+
+  :hover {
+    fill: ${({ theme }) => theme.colors.black};
+  }
 `;
 
 export const Logo = styled.img`
@@ -29,4 +36,14 @@ export const Logo = styled.img`
 
 export const Hr = styled.hr`
   width: 75%;
+`;
+
+export const ItemsContainer = styled(Column)`
+  padding: 35px;
+  justify-content: space-between;
+  height: 100%;
+`;
+
+export const ConfigurationItem = styled(Item)`
+  margin: 0;
 `;

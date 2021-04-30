@@ -1,3 +1,4 @@
+import Actions from "../pages/actions";
 import Insurance from "../pages/insurance";
 import Configuration from "../pages/configuration";
 import Stocks from "../pages/stocks";
@@ -11,9 +12,10 @@ import TestingPlayground from "../pages/testing-playground";
 import { ReactComponent as Person } from "../assets/icons/person.svg";
 import { ReactComponent as Card } from "../assets/icons/card.svg";
 import { ReactComponent as Archive } from "../assets/icons/archive.svg";
-import { ReactComponent as Ember } from "../assets/icons/ember.svg";
-import { ReactComponent as Graph } from "../assets/icons/graph.svg";
+import { ReactComponent as Bulb } from "../assets/icons/bulb.svg";
+import { ReactComponent as Activity } from "../assets/icons/activity.svg";
 import { ReactComponent as Gear } from "../assets/icons/gear.svg";
+import { ReactComponent as Shake } from "../assets/icons/shake.svg";
 
 export const routes = {
   home: {
@@ -22,14 +24,6 @@ export const routes = {
     component: Home,
     icon: <Person />,
     name: "Home",
-  },
-  testingPlayground: {
-    path: "/testing-playground",
-    exact: true,
-    component: TestingPlayground,
-  },
-  pageNotFound: {
-    component: PageNotFound,
   },
   payments: {
     path: "/payments",
@@ -49,8 +43,22 @@ export const routes = {
     path: "/stocks",
     exact: true,
     component: Stocks,
-    icon: <Graph />,
+    icon: <Activity />,
     name: "Stocks",
+  },
+  insurance: {
+    path: "/insurance",
+    exact: true,
+    component: Insurance,
+    icon: <Shake />,
+    name: "Insurance",
+  },
+  actions: {
+    path: "/actions",
+    exact: true,
+    component: Actions,
+    icon: <Bulb />,
+    name: "Actions",
   },
   configuration: {
     path: "/configuration",
@@ -59,9 +67,12 @@ export const routes = {
     icon: <Gear />,
     name: "Configuration",
   },
-  insurance: {
-    path: "/insurance",
+  testingPlayground: {
+    path: "/testing-playground",
     exact: true,
-    component: Insurance,
+    component: TestingPlayground,
+  },
+  pageNotFound: {
+    component: PageNotFound,
   },
 };
