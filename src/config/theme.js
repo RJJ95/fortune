@@ -1,23 +1,19 @@
 export const theme = {
   fonts: {
-    title: "",
-    paragraph: "",
+    title: `'DM Sans', sans-serif`,
+    paragraph: `'DM Sans', sans-serif`,
   },
   colors: {
-    primary: "",
-    secondary: "",
-    tertiary: "",
-    dark: "",
-    light: "",
+    black: "#000000",
+    white: "#FFFFFF",
+    darkGrey: "#9B9B9B",
+    lightGrey: "#F8F8F8",
+    blue: "#02A0FC",
+    purple: "#4339F2",
+    green: "#34B53A",
+    yellow: "#FFB200",
+    red: "#FF3A29",
   },
-  borderRadius: {
-    small: "",
-    medium: "",
-    large: "",
-  },
-  shadows: {
-    light: "",
-    medium: "",
-    dark: "",
-  },
+  borderRadius: "10px",
+  shadows: "0 2px 4px 0 rgba(0,0,0,0.50)",
 };
