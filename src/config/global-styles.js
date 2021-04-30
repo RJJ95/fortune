@@ -55,6 +55,10 @@ input[type=text] {
   box-shadow: ${({ theme }) => theme.shadows.medium};
   outline: none;
 }
+
+hr {
+  border: 1px solid ${({ theme }) => theme.colors.lightGrey};
+}
 `;
 
 export default GlobalStyles;

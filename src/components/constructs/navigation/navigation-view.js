@@ -1,11 +1,12 @@
-import { Wrapper, Items, Item, Logo } from "./navigation-style";
+import { Wrapper, Items, Item, Logo, Hr } from "./navigation-style";
 import { routes } from "../../../config/routes";
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.svg";
 
 const Navigation = () => {
   return (
     <Wrapper>
       <Logo src={logo} />
+      <Hr />
       <Items>
         {Object.values(routes)
           .filter((route) => route.name)
