@@ -11,9 +11,10 @@ function App() {
     <Router>
       <Layout>
         <Switch>
-          {Object.values(routes).map((route) => (
+          {Object.values(routes).map((route, index) => (
             <Route
               exact={route.exact}
+              key={index}
               path={route.path}
               component={route.component}
             />

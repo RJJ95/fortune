@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import Row from "../../primitives/row";
 
-export const Wrapper = styled(Row)`
+export const Body = styled.div`
   background-color: ${({ theme }) => theme.colors.lightGrey};
+  padding: 25px 40px 40px;
+  width: 100%;
 `;

@@ -18,7 +18,7 @@ export const Items = styled(Column)`
 
 export const Item = styled(NavLink)`
   text-decoration: none;
-  width: 30px;
+  width: 26px;
   fill: ${({ theme }) => theme.colors.mediumGrey};
   margin-bottom: 35px;
   transition: all 200ms linear;
