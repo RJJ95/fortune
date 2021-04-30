@@ -1,3 +1,4 @@
+import Payments from "../pages/payments";
 import Home from "../pages/home";
 import PageNotFound from "../pages/page-not-found";
 import TestingPlayground from "../pages/testing-playground";
@@ -19,5 +20,10 @@ export const routes = {
   },
   pageNotFound: {
     component: PageNotFound,
+  },
+payments: {
+    path: "/payments",
+    exact: true,
+    component: Payments,
   },
 };
