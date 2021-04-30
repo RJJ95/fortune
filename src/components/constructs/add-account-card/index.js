@@ -1,0 +1,1 @@
+export { default } from "./add-account-card-view";

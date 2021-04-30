@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Column from "../../primitives/column";
+import Card from "../../primitives/card"
 
 export const Wrapper = styled(Column)`
-  background-color: ${({ theme }) => theme.colors.white};
-  padding: 30px;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  ${Card}
   width: 210px;
 `;
 
