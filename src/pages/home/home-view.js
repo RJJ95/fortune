@@ -2,6 +2,7 @@ import { Wrapper } from "./home-style";
 
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import AccountOverviewCards from "../../components/sections/account-overview-cards";
+import DoubleLineChart from "../../components/constructs/double-line-chart";
 
 const data = [
   {
@@ -42,10 +43,44 @@ const data = [
   },
 ];
 
+const chartData = [
+  {
+    month: "1/1",
+    expenses: "800",
+    income: "2300",
+  },
+  {
+    month: "1/2",
+    expenses: "500",
+    income: "2400",
+  },
+  {
+    month: "1/3",
+    expenses: "800",
+    income: "2100",
+  },
+  {
+    month: "1/4",
+    expenses: "800",
+    income: "2300",
+  },
+  {
+    month: "1/5",
+    expenses: "500",
+    income: "2400",
+  },
+  {
+    month: "1/6",
+    expenses: "800",
+    income: "2100",
+  },
+];
+
 const Home = () => {
   return (
     <Wrapper>
       <AccountOverviewCards accounts={data} />
+      <DoubleLineChart data={chartData} />
     </Wrapper>
   );
 };

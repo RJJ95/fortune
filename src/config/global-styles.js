@@ -38,6 +38,15 @@ h5 {
 p {
   font-size: 1rem;
   line-height: 1.8;
+  font-family: ${({ theme }) => theme.fonts.paragraph};
+}
+
+span {
+  font-family: ${({ theme }) => theme.fonts.paragraph};
+}
+
+text {
+  font-family: ${({ theme }) => theme.fonts.paragraph};
 }
 
 button {

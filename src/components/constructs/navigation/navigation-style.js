@@ -9,6 +9,8 @@ export const Wrapper = styled.nav`
   flex-direction: column;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.white};
+  position: sticky;
+  top: 0;
 `;
 
 export const Items = styled(Column)`
