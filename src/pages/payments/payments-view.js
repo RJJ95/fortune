@@ -2,6 +2,7 @@ import { Wrapper } from "./payments-style";
 import PaymentCategoryOverview from "../../components/sections/payment-category-overview";
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import { ReactComponent as Sun } from "../../assets/icons/sun.svg";
+import PaymentsTable from "../../components/constructs/payments-table";
 
 const accountDetails = {
   data: [
@@ -43,6 +44,132 @@ const categories = [
   },
 ];
 
+const columns = [
+  {
+    header: "",
+    accessor: "logo",
+  },
+  {
+    header: "",
+    accessor: "name",
+  },
+  {
+    header: "",
+    accessor: "status",
+  },
+  {
+    header: "",
+    accessor: "amount",
+  },
+  {
+    header: "",
+    accessor: "date",
+  },
+  {
+    header: "",
+    accessor: "time",
+  },
+];
+
+const data = [
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+  {
+    logo: "Test",
+    name: "Albert Heijn",
+    status: "Completed",
+    amount: "$65",
+    date: "09 Dec 2020",
+    time: "14:10",
+  },
+];
+
 const Payments = () => {
   return (
     <Wrapper>
@@ -50,6 +177,7 @@ const Payments = () => {
         accountDetails={accountDetails}
         categories={categories}
       />
+      <PaymentsTable columns={columns} data={data} />
     </Wrapper>
   );
 };

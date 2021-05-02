@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    overflow: auto;
 `;
-    
-    
+
+export const TableContainer = styled.div`
+  margin-top: 50px;
+`;

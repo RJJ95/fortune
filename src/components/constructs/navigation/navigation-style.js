@@ -39,6 +39,7 @@ export const Logo = styled.img`
 
 export const Hr = styled.hr`
   width: 75%;
+  border: 1px solid ${({ theme }) => theme.colors.lightGrey};
 `;
 
 export const ItemsContainer = styled(Column)`

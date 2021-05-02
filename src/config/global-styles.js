@@ -9,10 +9,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: ${({ theme }) => theme.fonts.title};
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: ${({ theme }) => theme.fonts.title};
   font-weight: 300;
 }
 
@@ -39,15 +39,6 @@ h5 {
 p {
   font-size: 1rem;
   line-height: 1.8;
-  font-family: ${({ theme }) => theme.fonts.paragraph};
-}
-
-span {
-  font-family: ${({ theme }) => theme.fonts.paragraph};
-}
-
-text {
-  font-family: ${({ theme }) => theme.fonts.paragraph};
 }
 
 button {
@@ -58,16 +49,14 @@ button {
   cursor: pointer;
 }
 
-input[type=text] {
+input, select {
   font-size: 1rem;
-  padding: 10px;
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  box-shadow: ${({ theme }) => theme.shadows.medium};
+  height: 40px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   outline: none;
-}
-
-hr {
-  border: 1px solid ${({ theme }) => theme.colors.lightGrey};
+  border: none;
+  color: ${({ theme }) => theme.colors.black};
+  padding: 0 15px;
 }
 `;
 
