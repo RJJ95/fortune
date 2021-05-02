@@ -79,6 +79,7 @@ const chartData = [
 const Home = () => {
   return (
     <Wrapper>
+      <h1>Make your own fortune</h1>
       <AccountOverviewCards accounts={data} />
       <DoubleLineChart data={chartData} />
     </Wrapper>

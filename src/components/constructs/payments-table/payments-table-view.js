@@ -10,12 +10,14 @@ import { useTable } from "react-table";
 import Filters from "./components/filters";
 
 const statusOptions = [
+  { name: "Select status", value: 0 },
   { name: "In progress", value: 1 },
   { name: "Completed", value: 2 },
   { name: "Cancelled", value: 3 },
 ];
 
 const categoryOptions = [
+  { name: "Select category", value: 0 },
   { name: "In progress", value: 1 },
   { name: "Completed", value: 2 },
   { name: "Cancelled", value: 3 },

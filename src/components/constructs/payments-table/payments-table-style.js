@@ -26,6 +26,10 @@ export const TableCell = styled.td`
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
   }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const Hr = styled.hr`

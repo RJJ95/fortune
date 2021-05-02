@@ -58,6 +58,11 @@ input, select {
   color: ${({ theme }) => theme.colors.black};
   padding: 0 15px;
 }
+
+select {
+  appearance: none;
+  width: 200px;
+}
 `;
 
 export default GlobalStyles;

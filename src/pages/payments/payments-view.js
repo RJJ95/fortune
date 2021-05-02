@@ -2,6 +2,7 @@ import { Wrapper } from "./payments-style";
 import PaymentCategoryOverview from "../../components/sections/payment-category-overview";
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import { ReactComponent as Sun } from "../../assets/icons/sun.svg";
+import { ReactComponent as AH } from "../../assets/images/ah-logo.svg";
 import PaymentsTable from "../../components/constructs/payments-table";
 
 const accountDetails = {
@@ -73,7 +74,7 @@ const columns = [
 
 const data = [
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -81,7 +82,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -89,7 +90,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -97,7 +98,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -105,7 +106,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -113,7 +114,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -121,7 +122,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -129,7 +130,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -137,7 +138,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -145,7 +146,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -153,7 +154,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -161,7 +162,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: "Test",
+    logo: <AH />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -173,6 +174,7 @@ const data = [
 const Payments = () => {
   return (
     <Wrapper>
+      <h1>Payments received and made</h1>
       <PaymentCategoryOverview
         accountDetails={accountDetails}
         categories={categories}

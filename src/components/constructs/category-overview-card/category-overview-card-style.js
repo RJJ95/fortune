@@ -6,6 +6,7 @@ export const Wrapper = styled(Column)`
   ${Card}
   width: 210px;
   align-items: center;
+  overflow: scroll;
 `;
 
 export const IconContainer = styled(Column)`
