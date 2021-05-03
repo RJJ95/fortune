@@ -5,6 +5,7 @@ import {
   Category,
   Description,
   Expenditure,
+  UpperSection,
 } from "./category-overview-card-style";
 import { theme } from "../../../config/theme";
 
@@ -25,11 +26,13 @@ const CategoryOverviewCard = ({ Icon, category, description, expenditure }) => {
 
   return (
     <Wrapper>
-      <IconContainer backgroundColor={backgroundColor} fill={fill}>
-        {Icon}
-      </IconContainer>
-      <Category>{category}</Category>
-      <Description>{description}</Description>
+      <UpperSection>
+        <IconContainer backgroundColor={backgroundColor} fill={fill}>
+          {Icon}
+        </IconContainer>
+        <Category>{category}</Category>
+        <Description>{description}</Description>
+      </UpperSection>
       <Expenditure>{expenditure}</Expenditure>
     </Wrapper>
   );

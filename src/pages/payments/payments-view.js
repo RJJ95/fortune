@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import { ReactComponent as Sun } from "../../assets/icons/sun.svg";
 import { ReactComponent as AH } from "../../assets/images/ah-logo.svg";
 import PaymentsTable from "../../components/constructs/payments-table";
+import AccountSelector from "../../components/constructs/account-selector";
 
 const accountDetails = {
   data: [
@@ -171,9 +172,12 @@ const data = [
   },
 ];
 
+const banks = [<Logo />]
+
 const Payments = () => {
   return (
     <Wrapper>
+      <AccountSelector banks={banks} logo={<Logo />} />
       <h1>Payments received and made</h1>
       <PaymentCategoryOverview
         accountDetails={accountDetails}

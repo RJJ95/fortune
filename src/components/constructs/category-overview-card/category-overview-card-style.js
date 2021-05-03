@@ -6,7 +6,7 @@ export const Wrapper = styled(Column)`
   ${Card}
   width: 210px;
   align-items: center;
-  overflow: scroll;
+  justify-content: space-between;
 `;
 
 export const IconContainer = styled(Column)`
@@ -25,10 +25,10 @@ export const IconContainer = styled(Column)`
 `;
 
 export const Category = styled.h2`
-  margin: 20px 0 0;
+  margin: 30px 0 0;
 `;
 
-export const Description = styled.h3`
+export const Description = styled.h4`
   color: ${({ theme }) => theme.colors.mediumGrey};
   font-weight: 100;
   margin: 5px 0 20px;
@@ -36,4 +36,9 @@ export const Description = styled.h3`
 
 export const Expenditure = styled.h1`
   margin: 0;
+`;
+
+export const UpperSection = styled(Column)`
+  align-items: center;
+  justify-content: center;
 `;

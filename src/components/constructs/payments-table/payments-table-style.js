@@ -12,7 +12,6 @@ export const Tbody = styled.tbody``;
 
 export const TableRow = styled.tr`
   ${Card}
-  border-spacing: 0 20px;
 `;
 
 export const TableCell = styled.td`
