@@ -1,4 +1,4 @@
-import { LineChart, Line } from "recharts";
+import { LineChart, Line, ResponsiveContainer } from "recharts";
 
 import {
   Wrapper,
@@ -24,15 +24,17 @@ const AccountOverviewCard = ({
       <Difference signum={difference.charAt(0) === "+"}>
         {difference}%
       </Difference>
-      <LineChart width={200} height={100} data={data}>
-        <Line
-          type="monotone"
-          dataKey="uv"
-          stroke={serviceColor}
-          strokeWidth={4}
-          dot={false}
-        />
-      </LineChart>
+      <ResponsiveContainer height="100%" width="100%">
+        <LineChart data={data}>
+          <Line
+            type="monotone"
+            dataKey="uv"
+            stroke={serviceColor}
+            strokeWidth={4}
+            dot={false}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </Wrapper>
   );
 };

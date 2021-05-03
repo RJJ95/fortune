@@ -4,7 +4,8 @@ import Card from "../../primitives/card"
 
 export const Wrapper = styled(Column)`
   ${Card}
-  width: 210px;
+  min-width: 175px;
+  max-width: 175px;
 `;
 
 export const LogoContainer = styled.div`

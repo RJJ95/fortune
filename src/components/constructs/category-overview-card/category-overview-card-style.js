@@ -4,7 +4,8 @@ import Column from "../../primitives/column";
 
 export const Wrapper = styled(Column)`
   ${Card}
-  width: 210px;
+  min-width: 175px;
+  max-width: 175px;
   align-items: center;
   justify-content: space-between;
 `;

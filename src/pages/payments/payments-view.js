@@ -44,6 +44,12 @@ const categories = [
     description: "Fossil fuel is not done",
     expenditure: "$95",
   },
+  {
+    icon: <Sun />,
+    category: "Energy",
+    description: "Fossil fuel is not done",
+    expenditure: "$95",
+  },
 ];
 
 const columns = [
@@ -172,7 +178,7 @@ const data = [
   },
 ];
 
-const banks = [<Logo />]
+const banks = [<Logo />];
 
 const Payments = () => {
   return (
