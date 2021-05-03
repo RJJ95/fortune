@@ -1,6 +1,7 @@
 import { Wrapper } from "./payments-style";
 import PaymentCategoryOverview from "../../components/sections/payment-category-overview";
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
+import { ReactComponent as Abn } from "../../assets/images/abn-logo.svg";
 import { ReactComponent as Sun } from "../../assets/icons/sun.svg";
 import { ReactComponent as AH } from "../../assets/images/ah-logo.svg";
 import PaymentsTable from "../../components/constructs/payments-table";
@@ -178,7 +179,16 @@ const data = [
   },
 ];
 
-const banks = [<Logo />];
+const banks = [
+  {
+    name: "Ing",
+    Logo: Logo,
+  },
+  {
+    name: "Abn",
+    Logo: Abn,
+  },
+];
 
 const Payments = () => {
   return (

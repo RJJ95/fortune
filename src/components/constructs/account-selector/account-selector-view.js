@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   Wrapper,
   Selector,
   DropdownArrow,
   BankSelect,
   SelectArea,
+  LogoContainer,
 } from "./account-selector-style";
 import AccountTable from "./components/account-table";
+import Context from "../../../config/context";
 
 const data = [
   {
@@ -58,6 +60,7 @@ const data = [
 
 const AccountSelector = ({ logo, banks }) => {
   const [showSelectArea, setShowSelectArea] = useState(false);
+  const context = useContext(Context);
   return (
     <Wrapper>
       <Selector
@@ -68,7 +71,16 @@ const AccountSelector = ({ logo, banks }) => {
         <DropdownArrow />
       </Selector>
       <SelectArea show={showSelectArea}>
-        <BankSelect>{banks.map((bank) => bank)}</BankSelect>
+        <BankSelect>
+          {banks.map((bank, index) => (
+            <LogoContainer active={bank.name === context.activeBank}>
+              <bank.Logo
+                key={index}
+                onClick={() => context.setActiveBank(bank.name)}
+              />
+            </LogoContainer>
+          ))}
+        </BankSelect>
         <AccountTable data={data} />
       </SelectArea>
     </Wrapper>

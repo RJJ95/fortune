@@ -38,4 +38,17 @@ export const SelectArea = styled(Column)`
   overflow: scroll;
 `;
 
-export const BankSelect = styled(Row)``;
+export const BankSelect = styled(Row)`
+  svg {
+    height: 25px;
+    width: auto;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+`;
+
+export const LogoContainer = styled.div`
+  svg {
+    fill: ${(props) => !props.active && props.theme.colors.mediumGrey};
+  }
+`;
