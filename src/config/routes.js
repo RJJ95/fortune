@@ -1,3 +1,4 @@
+import SavingsGoal from "../pages/savings-goal";
 import Actions from "../pages/actions";
 import Insurance from "../pages/insurance";
 import Configuration from "../pages/configuration";
@@ -74,5 +75,10 @@ export const routes = {
   },
   pageNotFound: {
     component: PageNotFound,
+  },
+savingsGoal: {
+    path: "/savings-goal",
+    exact: true,
+    component: SavingsGoal,
   },
 };
