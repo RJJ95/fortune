@@ -16,6 +16,7 @@ const savingGoals = [
     Icon: <Bulb />,
     color: "green",
     progress: 60,
+    id: 1,
   },
   {
     title: "PS5",
@@ -23,6 +24,7 @@ const savingGoals = [
     Icon: <Bulb />,
     color: "green",
     progress: 66,
+    id: 2,
   },
   {
     title: "PS5",
@@ -30,6 +32,7 @@ const savingGoals = [
     Icon: <Bulb />,
     color: "green",
     progress: 66,
+    id: 3,
   },
 ];
 

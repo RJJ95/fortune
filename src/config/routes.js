@@ -68,6 +68,11 @@ export const routes = {
     icon: <Gear />,
     name: "Configuration",
   },
+  savingsGoal: {
+    path: "/savings-goal/:id",
+    exact: true,
+    component: SavingsGoal,
+  },
   testingPlayground: {
     path: "/testing-playground",
     exact: true,
@@ -75,10 +80,5 @@ export const routes = {
   },
   pageNotFound: {
     component: PageNotFound,
-  },
-savingsGoal: {
-    path: "/savings-goal",
-    exact: true,
-    component: SavingsGoal,
   },
 };

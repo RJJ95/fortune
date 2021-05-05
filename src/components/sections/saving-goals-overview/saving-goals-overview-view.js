@@ -7,6 +7,7 @@ const SavingGoalsOverview = ({ savingGoals }) => {
       {savingGoals.map((savingGoal, index) => (
         <SavingGoalCard
           key={index}
+          id={savingGoal.id}
           Icon={savingGoal.Icon}
           color={savingGoal.color}
           title={savingGoal.title}

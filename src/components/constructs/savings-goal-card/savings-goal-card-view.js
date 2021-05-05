@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Wrapper,
   Container,
@@ -9,7 +10,7 @@ import {
 import CategoryIcon from "../category-icon";
 import { theme } from "../../../config/theme";
 
-const SavingsGoalCard = ({ color, title, description, Icon, progress }) => {
+const SavingsGoalCard = ({ id, color, title, description, Icon, progress }) => {
   const [foregroundColor, setForegroundColor] = useState();
   const [backgroundColor, setBackgroundColor] = useState();
 
@@ -25,18 +26,20 @@ const SavingsGoalCard = ({ color, title, description, Icon, progress }) => {
   }, [color]);
 
   return (
-    <Wrapper>
-      <CategoryIcon Icon={Icon} color={color} />
-      <Container>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
+    <Link to={`/savings-goal/${id}`}>
+      <Wrapper>
+        <CategoryIcon Icon={Icon} color={color} />
+        <Container>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
           <Progress
             backgroundColor={backgroundColor}
             progress={progress}
             foregroundColor={foregroundColor}
           />
-      </Container>
-    </Wrapper>
+        </Container>
+      </Wrapper>
+    </Link>
   );
 };
 

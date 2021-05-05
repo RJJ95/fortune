@@ -41,6 +41,11 @@ p {
   line-height: 1.8;
 }
 
+a {
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.black};
+}
+
 button {
   font-size: 1rem;
   padding: 10px;
