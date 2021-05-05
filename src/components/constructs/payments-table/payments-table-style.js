@@ -16,7 +16,6 @@ export const TableRow = styled.tr`
 
 export const TableCell = styled.td`
   padding: 25px;
-  margin-bottom: 20px;
   :first-child {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;

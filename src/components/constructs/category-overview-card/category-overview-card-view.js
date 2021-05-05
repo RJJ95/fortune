@@ -1,35 +1,30 @@
 import { useState, useEffect } from "react";
 import {
   Wrapper,
-  IconContainer,
   Category,
   Description,
   Expenditure,
   UpperSection,
 } from "./category-overview-card-style";
-import { theme } from "../../../config/theme";
+import CategoryIcon from "../category-icon";
 
 const CategoryOverviewCard = ({ Icon, category, description, expenditure }) => {
-  const [fill, setFill] = useState();
-  const [backgroundColor, setBackgroundColor] = useState();
+  const [color, setColor] = useState("");
 
   useEffect(() => {
     switch (category) {
       case "Energy":
-        setBackgroundColor(theme.colors.lightGreen);
-        setFill(theme.colors.green);
+        setColor("green");
         break;
       default:
-        return theme.colors.mediumGrey;
+        setColor("");
     }
   }, [category]);
 
   return (
     <Wrapper>
       <UpperSection>
-        <IconContainer backgroundColor={backgroundColor} fill={fill}>
-          {Icon}
-        </IconContainer>
+        <CategoryIcon color={color} Icon={Icon} />
         <Category>{category}</Category>
         <Description>{description}</Description>
       </UpperSection>

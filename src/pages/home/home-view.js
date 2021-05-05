@@ -23,24 +23,6 @@ const data = [
     difference: "+5",
     serviceColor: "#FF6200",
   },
-  {
-    data: [
-      { uv: 100 },
-      { uv: 300 },
-      { uv: 200 },
-      { uv: 500 },
-      { uv: 600 },
-      { uv: 300 },
-      { uv: 500 },
-      { uv: 600 },
-      { uv: 100 },
-    ],
-    logo: <Logo />,
-    accountNumber: "NL23 INGB 0003 161 806",
-    balance: "$389",
-    difference: "+5",
-    serviceColor: "#FF6200",
-  },
 ];
 
 const chartData = [

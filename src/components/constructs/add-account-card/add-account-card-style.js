@@ -11,7 +11,8 @@ export const Add = styled(Plus)`
 
 export const Wrapper = styled(Row)`
   ${Card}
-  width: 210px;
+  min-width: 175px;
+  max-width: 175px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
