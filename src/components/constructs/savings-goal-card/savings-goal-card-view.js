@@ -25,7 +25,7 @@ const SavingsGoalCard = ({ id, color, title, description, Icon, progress }) => {
     }
   }, [color]);
 
-  return (
+  return id ? (
     <Link to={`/savings-goal/${id}`}>
       <Wrapper>
         <CategoryIcon Icon={Icon} color={color} />
@@ -40,6 +40,19 @@ const SavingsGoalCard = ({ id, color, title, description, Icon, progress }) => {
         </Container>
       </Wrapper>
     </Link>
+  ) : (
+    <Wrapper>
+      <CategoryIcon Icon={Icon} color={color} />
+      <Container>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+        <Progress
+          backgroundColor={backgroundColor}
+          progress={progress}
+          foregroundColor={foregroundColor}
+        />
+      </Container>
+    </Wrapper>
   );
 };
 
