@@ -5,7 +5,6 @@ import Column from "../../primitives/column";
 export const Wrapper = styled(Column)`
   ${Card}
   justify-content: center;
-  width: 100%;
   height: 90px;
 `;
 
@@ -16,6 +15,6 @@ export const Difference = styled.h1`
   font-weight: 100;
 `;
 
-export const Text = styled.h2`
+export const Text = styled.h3`
   margin: 0;
 `;
