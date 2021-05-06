@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "../../primitives/card";
+import Column from "../../primitives/column";
 
 export const Table = styled.table`
   width: 100%;
@@ -43,3 +44,5 @@ export const FiltersContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.lightGrey};
   padding-top: 40px;
 `;
+
+export const Wrapper = styled(Column)``;

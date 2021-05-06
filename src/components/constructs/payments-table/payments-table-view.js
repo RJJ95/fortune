@@ -5,6 +5,7 @@ import {
   TableCell,
   Hr,
   FiltersContainer,
+  Wrapper,
 } from "./payments-table-style";
 import { useTable } from "react-table";
 import Filters from "./components/filters";
@@ -36,7 +37,7 @@ const PaymentsTable = ({ columns, data }) => {
     data,
   });
   return (
-    <>
+    <Wrapper>
       <FiltersContainer>
         <Filters
           categoryOptions={categoryOptions}
@@ -63,7 +64,7 @@ const PaymentsTable = ({ columns, data }) => {
           })}
         </Tbody>
       </Table>
-    </>
+    </Wrapper>
   );
 };
 

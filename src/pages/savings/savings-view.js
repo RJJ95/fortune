@@ -1,5 +1,4 @@
 import {
-  Wrapper,
   Container,
   ChartContainer,
   SavingGoalsContainer,
@@ -98,7 +97,7 @@ const bars = [
 
 const Savings = () => {
   return (
-    <Wrapper>
+    <>
       <h1>Saving for a rainy day</h1>
       <Container>
         <ChartContainer>
@@ -108,7 +107,7 @@ const Savings = () => {
           <SavingGoalsOverview savingGoals={savingGoals} />
         </SavingGoalsContainer>
       </Container>
-    </Wrapper>
+    </>
   );
 };
 

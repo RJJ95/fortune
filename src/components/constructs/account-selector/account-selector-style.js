@@ -6,8 +6,8 @@ import Card from "../../primitives/card";
 
 export const Wrapper = styled(Column)`
   position: absolute;
-  right: 0;
-  top: -20px;
+  right: 20px;
+  top: 20px;
   align-items: flex-end;
 `;
 

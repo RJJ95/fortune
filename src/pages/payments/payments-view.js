@@ -1,4 +1,3 @@
-import { Wrapper } from "./payments-style";
 import PaymentCategoryOverview from "../../components/sections/payment-category-overview";
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import { ReactComponent as Abn } from "../../assets/images/abn-logo.svg";
@@ -192,7 +191,7 @@ const banks = [
 
 const Payments = () => {
   return (
-    <Wrapper>
+    <>
       <AccountSelector banks={banks} logo={<Logo />} />
       <h1>Payments received and made</h1>
       <PaymentCategoryOverview
@@ -200,7 +199,7 @@ const Payments = () => {
         categories={categories}
       />
       <PaymentsTable columns={columns} data={data} />
-    </Wrapper>
+    </>
   );
 };
 

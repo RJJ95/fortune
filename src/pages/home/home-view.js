@@ -1,5 +1,3 @@
-import { Wrapper } from "./home-style";
-
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import AccountOverviewCards from "../../components/sections/account-overview-cards";
 import DoubleLineChart from "../../components/constructs/double-line-chart";
@@ -60,11 +58,11 @@ const chartData = [
 
 const Home = () => {
   return (
-    <Wrapper>
+    <>
       <h1>Make your own fortune</h1>
       <AccountOverviewCards accounts={data} />
       <DoubleLineChart data={chartData} />
-    </Wrapper>
+    </>
   );
 };
 

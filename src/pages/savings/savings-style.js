@@ -2,16 +2,15 @@ import styled from "styled-components";
 import Row from "../../components/primitives/row";
 import Column from "../../components/primitives/column";
 
-export const Wrapper = styled(Column)``;
-
-export const Container = styled(Row)`
-  width: 50vw;
+export const Wrapper = styled(Column)`
+  width: 100%;
 `;
 
+export const Container = styled(Row)``;
+
 export const ChartContainer = styled(Row)`
-    flex-basis: 100%;
-    min-width: 100%;
-    margin-right: 40px;
+  margin-right: 40px;
+  width: 100%;
 `;
 
 export const SavingGoalsContainer = styled(Row)``;

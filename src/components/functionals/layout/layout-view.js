@@ -1,14 +1,13 @@
-import { Body } from "./layout-style";
-import Row from "../../primitives/row";
+import { Body, Wrapper } from "./layout-style";
 
 // Components
 import Navigation from "../../constructs/navigation";
 
 const Layout = ({ children }) => (
-  <Row>
+  <Wrapper>
     <Navigation />
     <Body>{children}</Body>
-  </Row>
+  </Wrapper>
 );
 
 export default Layout;
