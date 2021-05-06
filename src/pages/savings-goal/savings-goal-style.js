@@ -6,6 +6,9 @@ export const Wrapper = styled.div``;
 
 export const ChartsContainer = styled.div`
   width: 65%;
+  margin-right: 40px;
+  position: sticky;
+  top: 0;
 `;
 
 export const DataContainer = styled(Row)``;

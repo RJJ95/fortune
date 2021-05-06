@@ -45,12 +45,52 @@ const data = [
 ];
 
 const blogs = [
-  {
-    hero: heroImage,
-    title: "New: Thé Review",
-    description:
-      "Whatever it is you want, you should wait until you've read this.",
-  },
+  [
+    {
+      hero: heroImage,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+    {
+      hero: null,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+    {
+      hero: heroImage,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+  ],
+  [
+    {
+      hero: null,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+    {
+      hero: null,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+    {
+      hero: heroImage,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+    {
+      hero: heroImage,
+      title: "New: Thé Review",
+      description:
+        "Whatever it is you want, you should wait until you've read this.",
+    },
+  ],
 ];
 
 const SavingsGoal = () => {
