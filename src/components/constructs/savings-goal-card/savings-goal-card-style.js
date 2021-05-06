@@ -5,7 +5,6 @@ import Card from "../../primitives/card";
 
 export const Wrapper = styled(Row)`
   ${Card}
-  width: 350px;
 `;
 
 export const Container = styled(Column)`
@@ -26,7 +25,6 @@ export const Description = styled.h4`
 export const Progress = styled.div`
   margin-top: 15px;
   position: relative;
-  width: 100%;
   height: 7.5px;
   background-color: ${(props) => props.backgroundColor};
   border-radius: ${({ theme }) => theme.borderRadius};

@@ -6,12 +6,15 @@ import {
   SavingsGoalCardContainer,
   ResultCardContainer,
   BodyContainer,
+  AmountToGoContainer,
+  BlogContainer,
 } from "./savings-goal-style";
 import SavingsGoalCard from "../../components/constructs/savings-goal-card";
 import ResultCard from "../../components/constructs/result-card";
 import AreaLineChart from "../../components/constructs/area-line-chart";
 import BlogCards from "../../components/sections/blog-cards";
 import heroImage from "../../assets/images/hero-image.jpg";
+import AmountToGoCard from "../../components/constructs/amount-to-go-card";
 
 const data = [
   {
@@ -112,12 +115,17 @@ const SavingsGoal = () => {
             <ResultCardContainer>
               <ResultCard difference="+$200" />
             </ResultCardContainer>
+            <AmountToGoContainer>
+              <AmountToGoCard difference="$400" />
+            </AmountToGoContainer>
           </DataContainer>
           <AreaChartContainer>
             <AreaLineChart data={data} />
           </AreaChartContainer>
         </ChartsContainer>
-        <BlogCards blogs={blogs} />
+        <BlogContainer>
+          <BlogCards blogs={blogs} />
+        </BlogContainer>
       </BodyContainer>
     </Wrapper>
   );
