@@ -9,8 +9,10 @@ export const Wrapper = styled(Column)`
 export const Container = styled(Row)``;
 
 export const ChartContainer = styled(Row)`
-  margin-right: 40px;
+  padding-right: 40px;
   width: 100%;
 `;
 
-export const SavingGoalsContainer = styled(Row)``;
+export const SavingGoalsContainer = styled(Row)`
+  flex: 0 0 376px;
+`;

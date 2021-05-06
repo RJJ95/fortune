@@ -11,6 +11,7 @@ export const Wrapper = styled(Row)`
 export const Container = styled(Column)`
   margin-left: 30px;
   justify-content: center;
+  width: 100%;
 `;
 
 export const Title = styled.h2`

@@ -8,6 +8,7 @@ export const IconContainer = styled(Column)`
   border-radius: 50px;
   width: 90px;
   height: 90px;
+  flex-shrink: 0;
 
   svg {
     fill: ${(props) => props.fill};

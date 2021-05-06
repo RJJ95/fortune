@@ -8,7 +8,7 @@ export const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  flex: fit-content 0 0;
+  flex: 0 0 fit-content;
   background-color: ${({ theme }) => theme.colors.white};
   position: sticky;
   top: 0;

@@ -4,8 +4,9 @@ import Column from "../../primitives/column";
 
 export const Wrapper = styled(Column)`
   ${Card}
-  width: fit-content;
   justify-content: center;
+  width: 100%;
+  height: 90px;
 `;
 
 export const Difference = styled.h1`

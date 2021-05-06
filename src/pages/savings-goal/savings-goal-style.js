@@ -3,10 +3,21 @@ import Row from "../../components/primitives/row";
 
 export const Wrapper = styled.div``;
 
-export const ChartsContainer = styled.div``;
+export const ChartsContainer = styled.div`
+  width: 60%;
+`;
 
 export const DataContainer = styled(Row)`
-    > div:not(:last-child) {
-        margin-right: 40px;
-    }
+  justify-content: space-between;
 `;
+
+export const AreaChartContainer = styled.div`
+  margin-top: 40px;
+  height: 500px;
+`;
+
+export const SavingsGoalCardContainer = styled.div`
+  margin-right: 40px;
+`;
+
+export const ResultCardContainer = styled.div``;
