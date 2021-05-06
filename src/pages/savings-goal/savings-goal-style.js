@@ -21,3 +21,5 @@ export const SavingsGoalCardContainer = styled.div`
 `;
 
 export const ResultCardContainer = styled.div``;
+
+export const BodyContainer = styled(Row)``;

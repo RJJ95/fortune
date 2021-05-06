@@ -5,10 +5,13 @@ import {
   AreaChartContainer,
   SavingsGoalCardContainer,
   ResultCardContainer,
+  BodyContainer,
 } from "./savings-goal-style";
 import SavingsGoalCard from "../../components/constructs/savings-goal-card";
 import ResultCard from "../../components/constructs/result-card";
 import AreaLineChart from "../../components/constructs/area-line-chart";
+import BlogCards from "../../components/sections/blog-cards";
+import heroImage from "../../assets/images/hero-image.jpg";
 
 const data = [
   {
@@ -41,29 +44,41 @@ const data = [
   },
 ];
 
+const blogs = [
+  {
+    hero: heroImage,
+    title: "New: Thé Review",
+    description:
+      "Whatever it is you want, you should wait until you've read this.",
+  },
+];
+
 const SavingsGoal = () => {
   return (
     <Wrapper>
       <h1>Your savings goal</h1>
-      <ChartsContainer>
-        <DataContainer>
-          <SavingsGoalCardContainer>
-            <SavingsGoalCard
-              color="green"
-              title="PS5"
-              description="My savings goal"
-              Icon={null}
-              progress={69}
-            />
-          </SavingsGoalCardContainer>
-          <ResultCardContainer>
-            <ResultCard difference="+$200" />
-          </ResultCardContainer>
-        </DataContainer>
-        <AreaChartContainer>
-          <AreaLineChart data={data} />
-        </AreaChartContainer>
-      </ChartsContainer>
+      <BodyContainer>
+        <ChartsContainer>
+          <DataContainer>
+            <SavingsGoalCardContainer>
+              <SavingsGoalCard
+                color="green"
+                title="PS5"
+                description="My savings goal"
+                Icon={null}
+                progress={69}
+              />
+            </SavingsGoalCardContainer>
+            <ResultCardContainer>
+              <ResultCard difference="+$200" />
+            </ResultCardContainer>
+          </DataContainer>
+          <AreaChartContainer>
+            <AreaLineChart data={data} />
+          </AreaChartContainer>
+        </ChartsContainer>
+        <BlogCards blogs={blogs} />
+      </BodyContainer>
     </Wrapper>
   );
 };

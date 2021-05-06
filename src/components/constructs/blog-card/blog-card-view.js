@@ -1,9 +1,20 @@
-import { Wrapper } from "./blog-card-style"
+import {
+  Wrapper,
+  HeroImage,
+  TextContainer,
+  Title,
+  Description,
+} from "./blog-card-style";
 
-const BlogCard = () => {
-    return <Wrapper></Wrapper>
+const BlogCard = ({ hero, title, description }) => {
+  return (
+    <Wrapper background={hero}>
+      <TextContainer>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </TextContainer>
+    </Wrapper>
+  );
 };
 
 export default BlogCard;
-    
-    
