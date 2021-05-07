@@ -5,16 +5,12 @@ import Card from "../../components/primitives/card";
 export const Wrapper = styled.div``;
 
 export const ChartsContainer = styled.div`
-  width: 65%;
+  width: 100%;
   margin-right: 40px;
-
-  @media screen and (max-width: 966px) {
-    width: 100%;
-    margin-bottom: 40px;
-  }
 `;
 
-export const BlogContainer = styled.div``;
+export const BlogContainer = styled.div`
+`;
 
 export const DataContainer = styled(Row)``;
 
@@ -34,11 +30,7 @@ export const ResultCardContainer = styled.div`
   margin-right: 40px;
 `;
 
-export const BodyContainer = styled(Row)`
-  @media screen and (max-width: 966px) {
-    flex-direction: column;
-  }
-`;
+export const BodyContainer = styled(Row)``;
 
 export const AmountToGoContainer = styled.div`
   flex: 1 1 fit-content;
