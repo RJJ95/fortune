@@ -14,6 +14,32 @@ export const Wrapper = styled.nav`
   top: 0;
 `;
 
+export const Tooltip = styled.span`
+  top: calc(50% - 20px);
+  left: 40px;
+  position: absolute;
+  width: fit-content;
+  padding: 10px;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  background-color: ${({ theme }) => theme.colors.black};
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 200ms linear;
+  height: 20px;
+`;
+
+export const ItemContainer = styled.div`
+  position: relative;
+  margin-bottom: 35px;
+  height: fit-content;
+  width: 26px;
+
+  &:hover ${Tooltip} {
+    opacity: 1;
+  }
+`;
+
 export const Items = styled(Column)`
   justify-content: center;
   align-items: center;
@@ -21,10 +47,9 @@ export const Items = styled(Column)`
 
 export const Item = styled(NavLink)`
   text-decoration: none;
-  width: 26px;
   fill: ${({ theme }) => theme.colors.mediumGrey};
-  margin-bottom: 35px;
   transition: all 200ms linear;
+  position: relative;
 
   :hover {
     fill: ${({ theme }) => theme.colors.black};
@@ -46,6 +71,10 @@ export const ItemsContainer = styled(Column)`
   padding: 35px;
   justify-content: space-between;
   height: 100%;
+`;
+
+export const ConfigurationItemContainer = styled(ItemContainer)`
+  margin: 0;
 `;
 
 export const ConfigurationItem = styled(Item)`

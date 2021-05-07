@@ -6,6 +6,9 @@ import {
   Hr,
   ItemsContainer,
   ConfigurationItem,
+  ItemContainer,
+  Tooltip,
+  ConfigurationItemContainer,
 } from "./navigation-style";
 import { routes } from "../../../config/routes";
 import logo from "../../../assets/images/logo.svg";
@@ -20,7 +23,26 @@ const Navigation = () => {
           {Object.values(routes)
             .filter((route) => route.icon && route.name !== "Configuration")
             .map((route, index) => (
-              <Item
+              <ItemContainer key={index}>
+                <Item
+                  to={route.path}
+                  activeStyle={{
+                    fill: "black",
+                  }}
+                  exact={route.exact}
+                  content={route.name}
+                >
+                  {route.icon}
+                </Item>
+                <Tooltip>{route.name}</Tooltip>
+              </ItemContainer>
+            ))}
+        </Items>
+        {Object.values(routes)
+          .filter((route) => route.name === "Configuration")
+          .map((route, index) => (
+            <ConfigurationItemContainer>
+              <ConfigurationItem
                 key={index}
                 to={route.path}
                 activeStyle={{
@@ -29,22 +51,9 @@ const Navigation = () => {
                 exact={route.exact}
               >
                 {route.icon}
-              </Item>
-            ))}
-        </Items>
-        {Object.values(routes)
-          .filter((route) => route.name === "Configuration")
-          .map((route, index) => (
-            <ConfigurationItem
-              key={index}
-              to={route.path}
-              activeStyle={{
-                fill: "black",
-              }}
-              exact={route.exact}
-            >
-              {route.icon}
-            </ConfigurationItem>
+              </ConfigurationItem>
+              <Tooltip>{route.name}</Tooltip>
+            </ConfigurationItemContainer>
           ))}
       </ItemsContainer>
     </Wrapper>
