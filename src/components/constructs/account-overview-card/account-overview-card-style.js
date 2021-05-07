@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Column from "../../primitives/column";
-import Card from "../../primitives/card"
+import Card from "../../primitives/card";
 
 export const Wrapper = styled(Column)`
   ${Card}
@@ -12,6 +12,11 @@ export const Wrapper = styled(Column)`
 export const LogoContainer = styled.div`
   max-width: 100px;
   height: auto;
+
+  svg {
+    max-width: 100px;
+    max-height: 50px;
+  }
 `;
 
 export const AccountNumber = styled.h4`

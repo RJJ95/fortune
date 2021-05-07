@@ -6,6 +6,7 @@ import {
   BankSelect,
   SelectArea,
   LogoContainer,
+  CloseIcon,
 } from "./account-selector-style";
 import AccountTable from "./components/account-table";
 import Context from "../../../config/context";
@@ -68,16 +69,16 @@ const AccountSelector = ({ logo, banks }) => {
         onClick={() => setShowSelectArea(!showSelectArea)}
       >
         {logo}
-        <DropdownArrow />
+        {showSelectArea ? <CloseIcon /> : <DropdownArrow />}
       </Selector>
       <SelectArea show={showSelectArea}>
         <BankSelect>
           {banks.map((bank, index) => (
-            <LogoContainer active={bank.name === context.activeBank}>
-              <bank.Logo
-                key={index}
-                onClick={() => context.setActiveBank(bank.name)}
-              />
+            <LogoContainer
+              key={index}
+              active={bank.name === context.activeBank}
+            >
+              <bank.Logo onClick={() => context.setActiveBank(bank.name)} />
             </LogoContainer>
           ))}
         </BankSelect>
