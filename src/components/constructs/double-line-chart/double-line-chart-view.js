@@ -20,7 +20,13 @@ const DoubleLineChart = ({ data }) => {
           <CartesianGrid />
           <XAxis tickLine={false} axisLine={false} dataKey="month" />
           <YAxis tickLine={false} axisLine={false} />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              borderRadius: "10px",
+              border: "none",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.5)",
+            }}
+          />
           <Line
             dot={false}
             type="monotone"

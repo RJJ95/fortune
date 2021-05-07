@@ -16,6 +16,7 @@ export const theme = {
     lightGreen: "#E2FBD7",
     yellow: "#FFB200",
     red: "#FF3A29",
+    transparent: "rgba(0,0,0,0)",
   },
   borderRadius: "10px",
   shadows: "0 2px 4px 0 rgba(0,0,0,0.50)",

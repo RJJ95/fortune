@@ -1,5 +1,6 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Legend, Tooltip } from "recharts";
 import { Wrapper } from "./stacked-bar-chart-style";
+import BarShape from "./components/bar-shape";
 
 const StackedBarChart = ({ bars, data }) => {
   return (
@@ -12,7 +13,7 @@ const StackedBarChart = ({ bars, data }) => {
           top: 20,
           bottom: 20,
         }}
-        barCategoryGap="70%"
+        barSize={40}
       >
         <XAxis tickLine={false} axisLine={false} dataKey="name" />
         <YAxis tickLine={false} axisLine={false} />
@@ -22,6 +23,7 @@ const StackedBarChart = ({ bars, data }) => {
             border: "none",
             boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.5)",
           }}
+          cursor={{ fill: "transparent" }}
         />
         <Legend
           verticalAlign="top"
@@ -30,7 +32,13 @@ const StackedBarChart = ({ bars, data }) => {
           height={40}
         />
         {bars.map((bar, index) => (
-          <Bar key={index} dataKey={bar.key} fill={bar.color} stackId="a" />
+          <Bar
+            key={index}
+            dataKey={bar.key}
+            fill={bar.color}
+            stackId="a"
+            radius={[30, 30, 30, 30]}
+          />
         ))}
       </BarChart>
     </Wrapper>
