@@ -6,6 +6,7 @@ export const Wrapper = styled(Column)`
   ${Card}
   min-width: 175px;
   max-width: 175px;
+  height: 250px;
 `;
 
 export const LogoContainer = styled.div`
