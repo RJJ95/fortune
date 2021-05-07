@@ -6,6 +6,7 @@ const FadeTransition = ({ isVisible, children }) => {
   const defaultStyle = {
     transition: `opacity ${duration}ms ease-in-out`,
     opacity: 0,
+    zIndex: 10,
   };
 
   const transitionStyles = {
