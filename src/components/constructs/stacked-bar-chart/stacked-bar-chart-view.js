@@ -1,6 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Legend, Tooltip } from "recharts";
 import { Wrapper } from "./stacked-bar-chart-style";
-import BarShape from "./components/bar-shape";
 
 const StackedBarChart = ({ bars, data }) => {
   return (

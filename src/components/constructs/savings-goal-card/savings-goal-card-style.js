@@ -20,6 +20,10 @@ export const Title = styled.h2`
 export const Description = styled.h4`
   margin: 0;
   color: ${({ theme }) => theme.colors.mediumGrey};
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export const Progress = styled.div`

@@ -38,15 +38,15 @@ export const CloseIcon = styled(Close)`
 `;
 
 export const SelectArea = styled(Column)`
-  opacity: ${(props) => (props.show ? "1" : "0")};
-  transition: all 200ms linear;
   ${Card}
   width: 750px;
   max-height: 350px;
   margin-top: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  z-index: 10;
   overflow: scroll;
+  opacity: ${(props) => (props.show ? 1 : 0)};
+  transition: all 200ms linear;
 `;
 
 export const BankSelect = styled(Row)`

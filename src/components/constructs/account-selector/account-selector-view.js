@@ -10,6 +10,7 @@ import {
 } from "./account-selector-style";
 import AccountTable from "./components/account-table";
 import Context from "../../../config/context";
+import FadeTransition from "../../functionals/fade-transition";
 
 const data = [
   {
@@ -62,6 +63,7 @@ const data = [
 const AccountSelector = ({ logo, banks }) => {
   const [showSelectArea, setShowSelectArea] = useState(false);
   const context = useContext(Context);
+
   return (
     <Wrapper>
       <Selector
@@ -71,19 +73,21 @@ const AccountSelector = ({ logo, banks }) => {
         {logo}
         {showSelectArea ? <CloseIcon /> : <DropdownArrow />}
       </Selector>
-      <SelectArea show={showSelectArea}>
-        <BankSelect>
-          {banks.map((bank, index) => (
-            <LogoContainer
-              key={index}
-              active={bank.name === context.activeBank}
-            >
-              <bank.Logo onClick={() => context.setActiveBank(bank.name)} />
-            </LogoContainer>
-          ))}
-        </BankSelect>
-        <AccountTable data={data} />
-      </SelectArea>
+      <FadeTransition isVisible={showSelectArea}>
+        <SelectArea>
+          <BankSelect>
+            {banks.map((bank, index) => (
+              <LogoContainer
+                key={index}
+                active={bank.name === context.activeBank}
+              >
+                <bank.Logo onClick={() => context.setActiveBank(bank.name)} />
+              </LogoContainer>
+            ))}
+          </BankSelect>
+          <AccountTable data={data} />
+        </SelectArea>
+      </FadeTransition>
     </Wrapper>
   );
 };
