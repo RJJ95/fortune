@@ -27,6 +27,7 @@ export const Tooltip = styled.span`
   pointer-events: none;
   transition: all 200ms linear;
   height: 20px;
+  z-index: 5;
 `;
 
 export const ItemContainer = styled.div`

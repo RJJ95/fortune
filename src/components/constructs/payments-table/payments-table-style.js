@@ -1,35 +1,5 @@
 import styled from "styled-components";
-import Card from "../../primitives/card";
 import Column from "../../primitives/column";
-
-export const Table = styled.table`
-  width: 100%;
-  border-spacing: 0 15px;
-`;
-
-export const Thead = styled.thead``;
-
-export const Tbody = styled.tbody``;
-
-export const TableRow = styled.tr`
-  ${Card}
-`;
-
-export const TableCell = styled.td`
-  padding: 25px;
-  :first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  :last-child {
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-`;
 
 export const Hr = styled.hr`
   width: 95%;

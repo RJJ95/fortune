@@ -1,14 +1,6 @@
-import {
-  Table,
-  Tbody,
-  TableRow,
-  TableCell,
-  Hr,
-  FiltersContainer,
-  Wrapper,
-} from "./payments-table-style";
-import { useTable } from "react-table";
+import { Hr, FiltersContainer, Wrapper } from "./payments-table-style";
 import Filters from "./components/filters";
+import Table from "../table";
 
 const statusOptions = [
   { name: "Select status", value: 0 },
@@ -31,11 +23,34 @@ const sortOptions = [
   { name: "A - A", value: 4 },
 ];
 
-const PaymentsTable = ({ columns, data }) => {
-  const { getTableProps, getTableBodyProps, rows, prepareRow } = useTable({
-    columns,
-    data,
-  });
+const columns = [
+  {
+    header: "",
+    accessor: "logo",
+  },
+  {
+    header: "",
+    accessor: "name",
+  },
+  {
+    header: "",
+    accessor: "status",
+  },
+  {
+    header: "",
+    accessor: "amount",
+  },
+  {
+    header: "",
+    accessor: "date",
+  },
+  {
+    header: "",
+    accessor: "time",
+  },
+];
+
+const PaymentsTable = ({ data }) => {
   return (
     <Wrapper>
       <FiltersContainer>
@@ -46,24 +61,7 @@ const PaymentsTable = ({ columns, data }) => {
         />
         <Hr />
       </FiltersContainer>
-      <Table {...getTableProps()}>
-        <Tbody {...getTableBodyProps()}>
-          {rows.map((row, index) => {
-            prepareRow(row);
-            return (
-              <TableRow key={index} {...row.getRowProps()}>
-                {row.cells.map((cell, index) => {
-                  return (
-                    <TableCell key={index} {...cell.getCellProps()}>
-                      {cell.render("Cell")}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-            );
-          })}
-        </Tbody>
-      </Table>
+      <Table columns={columns} data={data} />
     </Wrapper>
   );
 };

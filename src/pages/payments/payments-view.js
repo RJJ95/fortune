@@ -52,33 +52,6 @@ const categories = [
   },
 ];
 
-const columns = [
-  {
-    header: "",
-    accessor: "logo",
-  },
-  {
-    header: "",
-    accessor: "name",
-  },
-  {
-    header: "",
-    accessor: "status",
-  },
-  {
-    header: "",
-    accessor: "amount",
-  },
-  {
-    header: "",
-    accessor: "date",
-  },
-  {
-    header: "",
-    accessor: "time",
-  },
-];
-
 const data = [
   {
     logo: <AH />,
@@ -198,7 +171,7 @@ const Payments = () => {
         accountDetails={accountDetails}
         categories={categories}
       />
-      <PaymentsTable columns={columns} data={data} />
+      <PaymentsTable data={data} />
     </>
   );
 };
