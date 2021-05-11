@@ -7,12 +7,12 @@ import {
 } from "./stocks-style";
 import StocksSubMenu from "../../components/constructs/stocks-sub-menu";
 import StocksTable from "../../components/constructs/stocks-table";
-import { ReactComponent as Alphabet } from "../../assets/images/alphabet-logo.svg";
-import { ReactComponent as Facebook } from "../../assets/images/facebook-logo.svg";
-import { ReactComponent as Microsoft } from "../../assets/images/microsoft-logo.svg";
-import { ReactComponent as Ford } from "../../assets/images/ford-logo.svg";
-import { ReactComponent as Amazon } from "../../assets/images/amazon-logo.svg";
-import { ReactComponent as Apple } from "../../assets/images/apple-logo.svg";
+import alphabet from "../../assets/images/alphabet-logo.png";
+import facebook from "../../assets/images/facebook-logo.png";
+import microsoft from "../../assets/images/microsoft-logo.png";
+import ford from "../../assets/images/ford-logo.png";
+import amazon from "../../assets/images/amazon-logo.png";
+import apple from "../../assets/images/apple-logo.png";
 
 const menuItems = [
   {
@@ -39,42 +39,42 @@ const menuItems = [
 
 const data = [
   {
-    logo: <Alphabet />,
+    logo: <img src={alphabet} alt="logo" />,
     symbol: "GOOGL",
     name: "Alphabet Inc.",
     price: "1.088.00",
     change: "-19.18",
   },
   {
-    logo: <Facebook />,
+    logo: <img src={facebook} alt="logo" />,
     symbol: "FB",
     name: "Facebook Inc.",
     price: "147.00",
     change: "-14.11",
   },
   {
-    logo: <Microsoft />,
+    logo: <img src={microsoft} alt="logo" />,
     symbol: "MSFT",
     name: "Microsoft Corporation",
     price: "142.49",
     change: "-2.89",
   },
   {
-    logo: <Ford />,
+    logo: <img src={ford} alt="logo" />,
     symbol: "F",
     name: "Ford Motor Company",
     price: "4.51",
     change: "-10.08",
   },
   {
-    logo: <Amazon />,
+    logo: <img src={amazon} alt="logo" />,
     symbol: "AMZN",
     name: "Amazon.com Inc.",
     price: "142.49",
     change: "+2.18",
   },
   {
-    logo: <Apple />,
+    logo: <img src={apple} alt="logo" />,
     symbol: "AAPL",
     name: "Apple Inc.",
     price: "127.22",

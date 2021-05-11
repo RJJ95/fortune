@@ -8,10 +8,12 @@ export const TableWrapper = styled.table`
 
 export const TableRow = styled.tr`
   ${Card}
+  height: 75px;
 `;
 
 export const TableCell = styled.td`
   padding: 25px;
+  height: 100%;
   :first-child {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -23,6 +25,10 @@ export const TableCell = styled.td`
   svg {
     max-height: 24px;
     max-width: 24px;
+  }
+  img {
+    max-height: 25px;
+    width: auto;
   }
 `;
 
