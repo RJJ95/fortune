@@ -2,9 +2,9 @@ import PaymentCategoryOverview from "../../components/sections/payment-category-
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import { ReactComponent as Abn } from "../../assets/images/abn-logo.svg";
 import { ReactComponent as Sun } from "../../assets/icons/sun.svg";
-import { ReactComponent as AH } from "../../assets/images/ah-logo.svg";
 import PaymentsTable from "../../components/constructs/payments-table";
 import AccountSelector from "../../components/constructs/account-selector";
+import ah from "../../assets/images/ah-logo.png"
 
 const accountDetails = {
   data: [
@@ -54,7 +54,7 @@ const categories = [
 
 const data = [
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -62,7 +62,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -70,7 +70,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -78,7 +78,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -86,7 +86,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -94,7 +94,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -102,7 +102,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -110,7 +110,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -118,7 +118,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -126,7 +126,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -134,7 +134,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",
@@ -142,7 +142,7 @@ const data = [
     time: "14:10",
   },
   {
-    logo: <AH />,
+    logo: <img src={ah} alt="ah-logo" />,
     name: "Albert Heijn",
     status: "Completed",
     amount: "$65",

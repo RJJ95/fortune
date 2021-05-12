@@ -3,7 +3,7 @@ import Column from "../../primitives/column";
 
 export const Hr = styled.hr`
   width: 95%;
-  border: 1px solid ${({ theme }) => theme.colors.mediumGrey};
+  border-top: 1px solid ${({ theme }) => theme.colors.mediumGrey};
   margin-top: 15px;
   margin-bottom: 0;
 `;

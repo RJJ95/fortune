@@ -8,6 +8,7 @@ export const TableWrapper = styled.table`
 
 export const TableRow = styled.tr`
   ${Card}
+  padding: 0;
   height: 75px;
 `;
 
@@ -17,18 +18,15 @@ export const TableCell = styled.td`
   :first-child {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    vertical-align: middle;
+    img {
+      max-height: 30px;
+      width: auto;
+    }
   }
   :last-child {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-  }
-  svg {
-    max-height: 24px;
-    max-width: 24px;
-  }
-  img {
-    max-height: 25px;
-    width: auto;
   }
 `;
 
