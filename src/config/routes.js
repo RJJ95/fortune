@@ -1,6 +1,6 @@
 import SavingsGoal from "../pages/savings-goal";
-import Actions from "../pages/actions";
-import Insurance from "../pages/insurance";
+// import Actions from "../pages/actions";
+// import Insurance from "../pages/insurance";
 import Configuration from "../pages/configuration";
 import Stocks from "../pages/stocks";
 import Savings from "../pages/savings";
@@ -13,10 +13,10 @@ import TestingPlayground from "../pages/testing-playground";
 import { ReactComponent as Person } from "../assets/icons/person.svg";
 import { ReactComponent as Card } from "../assets/icons/card.svg";
 import { ReactComponent as Archive } from "../assets/icons/archive.svg";
-import { ReactComponent as Bulb } from "../assets/icons/bulb.svg";
 import { ReactComponent as Activity } from "../assets/icons/activity.svg";
 import { ReactComponent as Gear } from "../assets/icons/gear.svg";
-import { ReactComponent as Shake } from "../assets/icons/shake.svg";
+// import { ReactComponent as Shake } from "../assets/icons/shake.svg";
+// import { ReactComponent as Bulb } from "../assets/icons/bulb.svg";
 
 export const routes = {
   home: {
@@ -47,20 +47,20 @@ export const routes = {
     icon: <Activity />,
     name: "Stocks",
   },
-  insurance: {
-    path: "/insurance",
-    exact: true,
-    component: Insurance,
-    icon: <Shake />,
-    name: "Insurance",
-  },
-  actions: {
-    path: "/actions",
-    exact: true,
-    component: Actions,
-    icon: <Bulb />,
-    name: "Actions",
-  },
+  // insurance: {
+  //   path: "/insurance",
+  //   exact: true,
+  //   component: Insurance,
+  //   icon: <Shake />,
+  //   name: "Insurance",
+  // },
+  // actions: {
+  //   path: "/actions",
+  //   exact: true,
+  //   component: Actions,
+  //   icon: <Bulb />,
+  //   name: "Actions",
+  // },
   configuration: {
     path: "/configuration",
     exact: true,

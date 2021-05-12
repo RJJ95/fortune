@@ -6,10 +6,14 @@ export const Wrapper = styled.div`
 `;
 
 export const SelectArrow = styled(Arrow)`
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: calc(50% - 10px);
-    left: 165px;
-    pointer-events: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+  right: 10px;
+  pointer-events: none;
+`;
+
+export const SelectContainer = styled.select`
+  background-color: ${(props) => props.theme.colors[props.backgroundColor]};
 `;

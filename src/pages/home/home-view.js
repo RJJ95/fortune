@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import AccountOverviewCards from "../../components/sections/account-overview-cards";
 import DoubleLineChart from "../../components/constructs/double-line-chart";
+import AddAccountModal from "../../components/constructs/add-account-modal";
 
 const data = [
   {
@@ -57,10 +59,15 @@ const chartData = [
 ];
 
 const Home = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
+      <AddAccountModal
+        setModalOpen={setModalOpen}
+        isOpen={modalOpen}
+      />
       <h1>Make your own fortune</h1>
-      <AccountOverviewCards accounts={data} />
+      <AccountOverviewCards setModalOpen={setModalOpen} accounts={data} />
       <DoubleLineChart data={chartData} />
     </>
   );

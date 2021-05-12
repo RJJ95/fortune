@@ -1,16 +1,9 @@
-import { Primary, Secondary, Tertiary } from "./button-style";
+import { StyledButton } from "./button-style";
 
-const Button = ({ kind, children, onClick }) => {
-  switch (kind) {
-    case "primary":
-      return <Primary onClick={onClick}>{children}</Primary>;
-    case "secondary":
-      return <Secondary onClick={onClick}>{children}</Secondary>;
-    case "tertiary":
-      return <Tertiary onClick={onClick}>{children}</Tertiary>;
-    default:
-      return <Primary onClick={onClick}>{children}</Primary>;
-  }
-};
+const Button = ({ children, onClick, color, fontColor }) => (
+  <StyledButton fontColor={fontColor} color={color} onClick={onClick}>
+    {children}
+  </StyledButton>
+);
 
 export default Button;

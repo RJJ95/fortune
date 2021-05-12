@@ -48,9 +48,10 @@ a {
 
 button {
   font-size: 1rem;
-  padding: 10px;
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  box-shadow: ${({ theme }) => theme.shadows.medium};
+  padding: 15px 30px;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  border: none;
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -66,7 +67,7 @@ input, select {
 
 select {
   appearance: none;
-  width: 200px;
+  width: 100%;
 }
 `;
 

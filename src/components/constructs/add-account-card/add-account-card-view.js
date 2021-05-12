@@ -1,8 +1,8 @@
 import { Wrapper, Add } from "./add-account-card-style";
 
-const AddAccountCard = () => {
+const AddAccountCard = ({ setModalOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setModalOpen(true)}>
       <Add />
     </Wrapper>
   );

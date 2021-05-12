@@ -27,7 +27,7 @@ export const Tooltip = styled.span`
   pointer-events: none;
   transition: all 200ms linear;
   height: 20px;
-  z-index: 5;
+  z-index: 100;
 `;
 
 export const ItemContainer = styled.div`
@@ -35,6 +35,7 @@ export const ItemContainer = styled.div`
   margin-bottom: 35px;
   height: fit-content;
   width: 26px;
+  z-index: 10;
 
   &:hover ${Tooltip} {
     opacity: 1;

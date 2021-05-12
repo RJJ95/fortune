@@ -2,7 +2,7 @@ import { Wrapper } from "./account-overview-cards-style";
 import AddAccountCard from "../../constructs/add-account-card";
 import AccountOverviewCard from "../../constructs/account-overview-card";
 
-const AccountOverviewCards = ({ accounts }) => {
+const AccountOverviewCards = ({ accounts, setModalOpen }) => {
   return (
     <Wrapper>
       {accounts.map((account, index) => (
@@ -16,7 +16,7 @@ const AccountOverviewCards = ({ accounts }) => {
           serviceColor={account.serviceColor}
         />
       ))}
-      <AddAccountCard />
+      <AddAccountCard setModalOpen={setModalOpen} />
     </Wrapper>
   );
 };

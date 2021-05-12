@@ -1,4 +1,4 @@
-import { Wrapper } from "./labelled-input-style";
+import { Wrapper, Input } from "./labelled-input-style";
 
 const LabelledInput = ({
   id,
@@ -8,15 +8,17 @@ const LabelledInput = ({
   onChange,
   disabled,
   placeholder,
+  backgroundColor,
 }) => {
   return (
     <Wrapper>
-      <label for={id}>{label}</label>
-      <input
+      <label htmlFor={id}>{label}</label>
+      <Input
+        backgroundColor={backgroundColor}
         type={type}
         name={id}
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
         placeholder={placeholder}
       />

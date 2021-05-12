@@ -41,9 +41,8 @@ const Navigation = () => {
         {Object.values(routes)
           .filter((route) => route.name === "Configuration")
           .map((route, index) => (
-            <ConfigurationItemContainer>
+            <ConfigurationItemContainer key="configuration">
               <ConfigurationItem
-                key={index}
                 to={route.path}
                 activeStyle={{
                   fill: "black",
