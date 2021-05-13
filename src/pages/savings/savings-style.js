@@ -6,7 +6,9 @@ export const Wrapper = styled(Column)`
   width: 100%;
 `;
 
-export const Container = styled(Row)``;
+export const Container = styled(Row)`
+  height: 80vh;
+`;
 
 export const ChartContainer = styled(Row)`
   padding-right: 40px;
@@ -14,5 +16,4 @@ export const ChartContainer = styled(Row)`
 `;
 
 export const SavingGoalsContainer = styled(Row)`
-  flex: 0 0 376px;
 `;
