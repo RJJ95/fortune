@@ -1,4 +1,4 @@
-import { Wrapper, Container } from "./filters-style";
+import { Wrapper, Container, SelectContainer } from "./filters-style";
 import SearchInput from "../../../search-input";
 import Select from "../../../select";
 
@@ -19,22 +19,28 @@ const Filters = ({
     <Wrapper>
       <Container>
         <SearchInput value={searchValue} onChange={handleSearch} />
-        <Select
-          options={statusOptions}
-          value={statusValue}
-          onChange={handleStatusFilter}
-        />
-        <Select
-          options={categoryOptions}
-          value={categoryValue}
-          onChange={handleCategoryFilter}
-        />
+        <SelectContainer>
+          <Select
+            options={statusOptions}
+            value={statusValue}
+            onChange={handleStatusFilter}
+          />
+        </SelectContainer>
+        <SelectContainer>
+          <Select
+            options={categoryOptions}
+            value={categoryValue}
+            onChange={handleCategoryFilter}
+          />
+        </SelectContainer>
       </Container>
-      <Select
-        options={sortOptions}
-        value={sortValue}
-        onChange={handleSortFilter}
-      />
+      <SelectContainer>
+        <Select
+          options={sortOptions}
+          value={sortValue}
+          onChange={handleSortFilter}
+        />
+      </SelectContainer>
     </Wrapper>
   );
 };
