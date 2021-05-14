@@ -1,6 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+* {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  ::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.colors.lightGrey};
+  }
+}
+
 html {
   font-size: 100%;
 }
