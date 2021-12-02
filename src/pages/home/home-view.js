@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useIsAuthenticated } from "@azure/msal-react";
 import { ReactComponent as Logo } from "../../assets/images/ing-logo.svg";
 import AccountOverviewCards from "../../components/sections/account-overview-cards";
 import DoubleLineChart from "../../components/constructs/double-line-chart";
 import AddAccountModal from "../../components/constructs/add-account-modal";
+import SignInButton from "../../components/constructs/sign-in-button";
 
 const data = [
   {
@@ -60,15 +62,23 @@ const chartData = [
 
 const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const isAuthenticated = useIsAuthenticated();
+
   return (
     <>
-      <AddAccountModal
-        setModalOpen={setModalOpen}
-        isOpen={modalOpen}
-      />
-      <h1>Make your own fortune</h1>
-      <AccountOverviewCards setModalOpen={setModalOpen} accounts={data} />
-      <DoubleLineChart data={chartData} />
+      {isAuthenticated ? (
+        <>
+          <AddAccountModal setModalOpen={setModalOpen} isOpen={modalOpen} />
+          <h1>Make your own fortune</h1>
+          <AccountOverviewCards setModalOpen={setModalOpen} accounts={data} />
+          <DoubleLineChart data={chartData} />
+        </>
+      ) : (
+        <>
+        Not authenticated
+        <SignInButton />
+        </>
+      )}
     </>
   );
 };

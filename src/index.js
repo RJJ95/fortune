@@ -5,12 +5,19 @@ import reportWebVitals from "./reportWebVitals";
 import GlobalStyles from "./config/global-styles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./config/theme";
+import { PublicClientApplication } from "@azure/msal-browser";
+import { MsalProvider } from "@azure/msal-react";
+import { msalConfig } from "./authConfig";
+
+const msalInstance = new PublicClientApplication(msalConfig);
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <App />
+      <MsalProvider instance={msalInstance}>
+        <App />
+      </MsalProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
